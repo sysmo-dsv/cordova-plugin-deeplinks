@@ -31,13 +31,16 @@
   },
   "dependencies": {
     "mkpath": ">=1.0.0",
-    "xml2js": ">=0.4",
-    "rimraf": ">=2.4",
     "node-version-compare": ">=1.0.1",
-    "plist": ">=1.2.0"
+    "plist": ">=1.2.0",
+    "rimraf": ">=2.4",
+    "xml2js": ">=0.4"
   },
   "overrides": {
     "brace-expansion": "4.0.0"
+  },
+  "resolutions": {
+    "**/brace-expansion": "4.0.0"
   },
   "author": "Nikolay Demyankov for Nordnet Bank AB",
   "license": "MIT",
@@ -46,9 +49,11 @@
   },
   "homepage": "https://github.com/e-imaxina/cordova-plugin-deeplinks#readme",
   "devDependencies": {
+    "npm-force-resolutions": "^0.0.10",
     "standard-version": "^7.0.0"
   },
   "scripts": {
-    "release": "standard-version"
+    "release": "standard-version",
+    "preinstall": "npx npm-force-resolutions"
   }
 }
